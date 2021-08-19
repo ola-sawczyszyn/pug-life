@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pug Life 🐕</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        width: 100%;
+        margin: 0;
+      }
+
+      body {
+        padding: 16px;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, #ffeeee, #fffcdc);
+      }
+
+      .container {
+        width: 800px;
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+        color: #222831;
+        font-size: 48px;
+        margin: 0;
+      }
+      h2.hashtag {
+        text-align: center;
+        margin: 32px auto;
+        color: #00adb5;
+        font-size: 28px;
+      }
+      h2:hover {
+        text-decoration: underline;
+      }
+      .joke {
+        display: block;
+        text-align: center;
+        font-family: "Lobster", cursive;
+        color: #393e46;
+        font-weight: lighter;
+      }
+      p {
+        font-family: "Lato", sans-serif;
+        text-align: center;
+        color: #393e46;
+        text-align: center;
+        margin-bottom: 24px;
+        line-height: 1.9;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a.learn-more {
+        display: block;
+        text-align: center;
+        font-size: small;
+        font-weight: bold;
+        color: #00adb5;
+        margin-bottom: 38px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+        display: block;
+        margin: 64px auto;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 8px 16px;
+        font-size: 38px;
+        border-radius: 16px;
+        font-family: "Lobster", cursive;
+        border: 3px solid #00adb5;
+        color: #222831;
+        cursor: pointer;
+        transition: all 200ms linear;
+        box-shadow: 5px 5px 5px #222831;
+        margin-bottom: 48px;
+      }
+
+      button:hover {
+        background-color: #222831;
+        color: #00adb5;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 32px;
+        font-size: small;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pugs are the best</h1>
+      <a
+        href="https://www.urbandictionary.com/define.php?term=pug-life"
+        target="_blank"
+      >
+        <h2 class="hashtag">#PugLife</h2>
+      </a>
+      <span class="joke">
+        How do you turn a pug into a watchdog? <br />
+        You give him a Rolex 🤣
+      </span>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/011/151/original/puglett.gif?1624200746"
+        alt="Waving Pug"
+      />
+      <p>
+        <strong> <em>The Pug</em> </strong> is a breed of dog with physically
+        distinctive features of a wrinkly, short-muzzled face, and curled tail.
+        The breed has a fine, glossy coat that comes in a variety of colours,
+        most often light brown (fawn) or black, and a compact, square body with
+        well-developed muscles.
+      </p>
+      <a
+        class="learn-more"
+        href="https://en.wikipedia.org/wiki/Pug"
+        target="_blank"
+      >
+        👉 Learn more on Wikipedia 👈
+      </a>
+      <button>Adopt a Pug</button>
+      <hr />
+      <p class="footer">This page was build by Aleksandra Sawczyszyn 👩‍💻</p>
+    </div>
+    <script>
+      function adopt() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        if (name.length > 0 && email.length > 0) {
+          alert("Thank you " + name + "! We will contact you soon 😉");
+        } else {
+          alert("Please provide both email and name");
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", adopt);
+    </script>
+  </body>
+</html>
